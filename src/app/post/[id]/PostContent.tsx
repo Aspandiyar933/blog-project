@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image"
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -32,7 +33,7 @@ export default function PostContent({ post }: { post: Post }) {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <img src={post.thumbnail} alt={post.title} className="w-full h-64 object-cover mb-8" />
+      <Image src={post.thumbnail} alt={post.title} className="w-full h-64 object-cover mb-8" />
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
       <div className="mb-8" dangerouslySetInnerHTML={{ __html: post.content }} />
       <div className="flex items-center justify-between">

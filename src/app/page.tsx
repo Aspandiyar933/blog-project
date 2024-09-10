@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image"
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -45,7 +46,7 @@ export default function Home() {
           <Link href={`/post/${post.id}`} key={post.id}>
             <Card>
               <CardHeader>
-                <img src={post.thumbnail} alt={post.title} className="w-full h-48 object-cover" />
+                <Image src={post.thumbnail} alt={post.title} className="w-full h-48 object-cover" />
               </CardHeader>
               <CardContent>
                 <h2 className="text-lg font-semibold">{post.title}</h2>

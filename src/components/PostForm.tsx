@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image"
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { UploadButton } from "@uploadthing/react";
@@ -77,7 +78,7 @@ export default function PostForm({ post }: { post?: any }) {
             {thumbnail && (
               <>
                 <p>Current thumbnail URL: {thumbnail}</p>
-                <img 
+                <Image 
                   src={thumbnail} 
                   alt="Thumbnail preview" 
                   className="mt-2 h-32 object-cover rounded-md" 
