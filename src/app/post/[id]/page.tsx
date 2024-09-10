@@ -1,4 +1,3 @@
-// src/app/post/[id]/page.tsx
 
 import { PrismaClient } from '@prisma/client';
 import PostContent from './PostContent';
